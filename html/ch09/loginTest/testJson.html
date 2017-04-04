@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>testJson.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <form action="jsonTest" method="post">
+     	用户ID:<input type="text" name="userid" onblur="checkUserId(this.value)"><span id="msg"></span><br>
+     	密码:<input type="password" name="userpass">
+     	<input type="submit" value="登录">
+     	<input type="reset" value="重置">
+     </form>
+  </body>
+  <script>
+  	var xmlHttp;
+  	function createXMLHttp(){
+  		if(window.XMLHttpRequest){
+  			xmlHttp = new XMLHttpRequest();
+  		}else{
+  			xmlHttp = new ActiveObject("Microsoft.XMLHTTP");
+  		}
+  	}
+  	function checkUserId(userId){
+  		createXMLHttp();
+  		xmlHttp.open("POST","jsonTest?userId="+userId);
+  		xmlHttp.onreadystatechange = checkUseridCallback;
+  		xmlHttp.send(null);
+  		document.getElementById("msg").innerHTML = "正在验证";
+  	}
+  	function checkUseridCallback(){
+  		if(xmlHttp.readyState == 4){
+  			if(xmlHttp.status == 200){
+  				var text = xmlHttp.responseText;
+  				if(text == "true"){
+  					flag = false;
+  					/* document.getElementById("msg") */
+  				}else{
+  					flag = true;
+  				}
+  			}
+  		}
+  	}
+  </script>
+</html>

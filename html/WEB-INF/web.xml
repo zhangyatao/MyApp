@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>cn.mldn.lxh.servletdemo.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/servlet/HelloServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>input</servlet-name>
+    <servlet-class>cn.mldn.lxh.servletdemo.InputServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>input</servlet-name>
+    <url-pattern>/ch09/InputServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>input</servlet-name>
+    <url-pattern>/ch09/loginTest/InputServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>loginTest</servlet-name>
+    <servlet-class>cn.mldn.lxh.mvcdemo.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginTest</servlet-name>
+    <url-pattern>/ch09/loginTest/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>jsonTest</servlet-name>
+    <servlet-class>jsonTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jsonTest</servlet-name>
+    <url-pattern>/ch09/loginTest/jsonTest</url-pattern>
+  </servlet-mapping>
+  
+  
+<!-- <filter>
+	<filter-name>encoding</filter-name>
+	<filter-class>cn.mldn.lxh.filterdemo.EncodingFilter</filter-class>
+	<init-param>
+		<param-name>charset</param-name>
+		<param-value>UTF-8</param-value>
+	</init-param>
+</filter>
+<filter-mapping>
+	<filter-name>encoding</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping> -->
+  
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/error.jsp</location>
+  </error-page>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

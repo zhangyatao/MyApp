@@ -1,0 +1,12 @@
+.parent{
+	width: 100%;
+    border: 1px solid;
+    display: flex;
+}
+.children1{
+	width: 150px;
+    float: left;
+}
+.children2{
+	width: 350px;
+}
