@@ -19,6 +19,7 @@
      	<input type="reset" value="重置">
      </form>
   </body>
+  <script src="../../frame/Jquery/pc/jquery.js"></script>
   <script>
   	var xmlHttp;
   	function createXMLHttp(){
@@ -29,11 +30,35 @@
   		}
   	}
   	function checkUserId(userId){
+  		JqueryPost();
+  		return;
   		createXMLHttp();
-  		xmlHttp.open("POST","jsonTest?userId="+userId);
+  		var param = {
+  			"userId":"111",
+  			"obj":{
+  				"userName":"zyt",
+  				"age":"18"
+  			},
+  			"arr":["1","2"]
+  		}
+  		xmlHttp.open("POST","jsonTest?param="+JSON.stringify(param));
   		xmlHttp.onreadystatechange = checkUseridCallback;
   		xmlHttp.send(null);
   		document.getElementById("msg").innerHTML = "正在验证";
+  	}
+  	function JqueryPost(){
+  		 $.post("jsonTest",
+	    {
+	     "userId":"111",
+  			"obj":{
+  				"userName":"zyt",
+  				"age":"18"
+  			},
+  			"arr":["1","2"]
+	    },
+	    function(data,status){
+	      alert("数据：" + data + "\n状态：" + status);
+	    });
   	}
   	function checkUseridCallback(){
   		if(xmlHttp.readyState == 4){

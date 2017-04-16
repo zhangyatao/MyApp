@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home.html</title>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="../../../frame/Jquery/phone/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" type="text/css" href="../../../frame/swiper/css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/style.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+   
+
+  </head>
+  
+  <body>
+   <div id="contains">
+   	<div id="grid">
+   		<div data-role="page" id="pageone">
+		  <div data-role="header">
+		    <h1>我的金融中心</h1>
+		    <div class="swiper-container">
+		  		<div class="swiper-wrapper" id="carousal"></div>
+		  		 <div class="swiper-pagination"></div>
+		  	</div>
+		  </div>
+		
+		  <div data-role="content" class="row bg-white">
+		  	<a href="#link" class="col text-center">
+		  	<img class="home-p1" src="../../images/home/ion_loan.png">
+		  	<p class="home-f1">我要贷款</p>
+		  	</a>
+		  	<a href="#link" class="col text-center">
+		  	<img class="home-p1" src="../../images/home/ion_servant.png">
+		  	<p class="home-f1">代言人</p>
+		  	</a>
+		  	<a href="#link" class="col text-center">
+		  	<img class="home-p1" src="../../images/home/ion_credt_card.png">
+		  	<p class="home-f1">信用卡</p>
+		  	</a>
+		  	
+		  </div>
+		  <div class="container row home-usr-rewards-outer home-unlogin-rewards-outer-bg">
+		  	<div class="row servant-bold">
+		  		<div class="col-33" style="padding-right: 1em; width: 33.3%; text-align: center !important;">
+		  			<div class="home-login-rewards-img">
+		  				<div class="home-rewards-fonts">
+		  					 累计收益
+		  				</div>
+		  				<div class="home-rewards-amt-fonts">
+		  					<span class="home-rewards-small-fonts" id="user_rewards">--</span>
+		  					<span class="home-rewards-small-fonts" style="color: rgb(228, 85, 96);">元</span>
+		  				</div>
+		  			</div>
+		  		</div>
+		  		<div class="col-66 text-left" style="width: 66%;">
+		  			<div class="row" style="border-bottom: 1px solid rgb(235, 235, 235);">
+		  				<div class="col text-center">
+		  					<a>
+		  						<img class="home-login-btn" src="../../images/home/unlogin_button.png">
+		  					</a>
+		  				</div>
+		  			</div>
+		  			<div class="row home-rewards-loan">
+		                <div class="col" style="border-right: 1px solid rgb(235, 235, 235);">
+		                  <div class="home-rewards-fonts">放贷总额</div>
+		                  <div class="home-rewards-amt-fonts home-rewards-middle-fonts">
+		                    <!-- ngIf: user != undefined -->
+		                    <!-- ngIf: user == undefined --><span class="" ng-if="user == undefined">---</span><!-- end ngIf: user == undefined -->
+		                    <span>元</span>
+		                  </div>
+		                </div>
+		                <div class="col">
+		                  <div class="home-rewards-fonts">推荐办卡</div>
+		                  <div class="home-rewards-amt-fonts home-rewards-middle-fonts">
+		                    <!-- ngIf: user != undefined -->
+		                    <!-- ngIf: user == undefined --><span class="" ng-if="user == undefined">---</span><!-- end ngIf: user == undefined -->
+		                    <span>张</span>
+		                  </div>
+		                </div>
+		            </div>
+		  		</div>
+		  	</div>
+		  </div>
+		
+		
+		<div class="bg-white loan-list">
+        <div class="row">
+          <div class="col-75 font-bold" style="width: 75%;">
+            	热门贷款
+          </div>
+          <div class="col-25 text-right" style="width: 25%;">
+            <a class="font-grey" href="#/tab/credits">更多 &gt;&gt;</a>
+          </div>
+        </div>
+        <div class="">
+          <!-- s : 贷款列表 -->
+          <ul class="list">
+             <li ng-repeat="hotProduct in hotProductList" class="">
+                  <a class="item item-thumbnail-left row padding-0" href="#/tab/credits?redirctUrl=/tab/credits/8aae9828539c94080153a286f068012a/5/12" style="border-right:none;vertical-align: middle; max-height:300px;text-decoration : none">
+                      <img class="img-flot-left" src="../../images/home/loan_hot.png" alt="">
+                      <div class="col-5 col-center credit-d1">
+                          <p class="credit-c1 text-center" style="margin-top: 40%;"><b class="ng-binding">1</b>%</p>
+                          <p class="text-center credit-c2">月利率</p>
+                      </div>
+                      <!-- <div class="col-5 col-top padding"><img class="credit-p3" ng-src="/easyplay/{{hotProduct.imageLogoPath}}"></div> -->
+                      <div class="col" style="padding-top:20px;">
+                          <div class="home-credit-title">
+                            <!-- <span class="">{{hotProduct.productName}}</span>
+                            <img class="" src="/img/theme_loan/loan_logo.png"> -->
+                            <img src="../../images/home/3043578864632832.png">
+                          </div>
+
+
+                          <div class="credit-p2 ng-binding">放款周期：3工作日</div>
+                          <div class="row home-hot-credit-feature" style="margin-left:-5%;">
+                              <!-- ngRepeat: (key, value) in hotProduct.productCharas --><div ng-repeat="(key, value) in hotProduct.productCharas">
+                                  <!-- credit-j1 -->
+                                  <div class="col col-33" ng-switch="" on="key">
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478b13820002 -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478beed50003 -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478c2fc70004 --><label ng-switch-when="2c908c7651474aa40151478c2fc70004">
+                                          <img class="credit-p1" src="../../images/home/loan_circle.png"> 利率较低
+                                      </label><!-- end ngSwitchWhen: -->
+                                  </div>
+                              </div><!-- end ngRepeat: (key, value) in hotProduct.productCharas --><div ng-repeat="(key, value) in hotProduct.productCharas">
+                                  <!-- credit-j1 -->
+                                  <div class="col col-33" ng-switch="" on="key">
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478b13820002 -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478beed50003 --><label ng-switch-when="2c908c7651474aa40151478beed50003">
+                                          <img class="credit-p1" src="../../images/home/loan_circle.png"> 手续便捷
+                                      </label><!-- end ngSwitchWhen: -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478c2fc70004 -->
+                                  </div>
+                              </div><!-- end ngRepeat: (key, value) in hotProduct.productCharas --><div ng-repeat="(key, value) in hotProduct.productCharas">
+                                  <!-- credit-j1 -->
+                                  <div class="col col-33" ng-switch="" on="key">
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478b13820002 --><label ng-switch-when="2c908c7651474aa40151478b13820002">
+                                          <img class="credit-p1" src="../../images/home/loan_circle.png"> 速度快
+                                      </label><!-- end ngSwitchWhen: -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478beed50003 -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478c2fc70004 -->
+                                  </div>
+                              </div><!-- end ngRepeat: (key, value) in hotProduct.productCharas -->
+                          </div>
+                      </div>
+                      <div class="home-hot-arrow"><img class="" src="../../images/home/loan_arrow_right_1.png" alt="" style=""></div>
+                  </a>
+              </li>
+             <li ng-repeat="hotProduct in hotProductList" class="">
+                  <a class="item item-thumbnail-left row padding-0" href="#/tab/credits?redirctUrl=/tab/credits/071138a6e9ba4b83964d54c27c815cac/5/12" style="border-right:none;vertical-align: middle; max-height:300px;text-decoration : none">
+                      <img class="img-flot-left" src="../../images/home/loan_hot.png" alt="">
+                      <div class="col-5 col-center credit-d1">
+                          <p class="credit-c1 text-center" style="margin-top: 40%;"><b class="ng-binding">0.61</b>%</p>
+                          <p class="text-center credit-c2">月利率</p>
+                      </div>
+                      <!-- <div class="col-5 col-top padding"><img class="credit-p3" ng-src="/easyplay/{{hotProduct.imageLogoPath}}"></div> -->
+                      <div class="col" style="padding-top:20px;">
+                          <div class="home-credit-title">
+                            <!-- <span class="">{{hotProduct.productName}}</span>
+                            <img class="" src="/img/theme_loan/loan_logo.png"> -->
+                            <img src="../../images/home/3069227416290304.png">
+                          </div>
+
+
+                          <div class="credit-p2 ng-binding">放款周期：3工作日</div>
+                          <div class="row home-hot-credit-feature" style="margin-left:-5%;">
+                              <!-- ngRepeat: (key, value) in hotProduct.productCharas --><div ng-repeat="(key, value) in hotProduct.productCharas">
+                                  <!-- credit-j1 -->
+                                  <div class="col col-33" ng-switch="" on="key">
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478b13820002 -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478beed50003 -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478c2fc70004 --><label ng-switch-when="2c908c7651474aa40151478c2fc70004">
+                                          <img class="credit-p1" src="../../images/home/loan_circle.png"> 利率较低
+                                      </label><!-- end ngSwitchWhen: -->
+                                  </div>
+                              </div><!-- end ngRepeat: (key, value) in hotProduct.productCharas --><div ng-repeat="(key, value) in hotProduct.productCharas">
+                                  <!-- credit-j1 -->
+                                  <div class="col col-33" ng-switch="" on="key">
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478b13820002 -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478beed50003 --><label ng-switch-when="2c908c7651474aa40151478beed50003">
+                                          <img class="credit-p1" src="../../images/home/loan_circle.png"> 手续便捷
+                                      </label><!-- end ngSwitchWhen: -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478c2fc70004 -->
+                                  </div>
+                              </div><!-- end ngRepeat: (key, value) in hotProduct.productCharas --><div ng-repeat="(key, value) in hotProduct.productCharas">
+                                  <!-- credit-j1 -->
+                                  <div class="col col-33" ng-switch="" on="key">
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478b13820002 --><label ng-switch-when="2c908c7651474aa40151478b13820002">
+                                          <img class="credit-p1" src="../../images/home/loan_circle.png"> 速度快
+                                      </label><!-- end ngSwitchWhen: -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478beed50003 -->
+                                      <!-- ngSwitchWhen: 2c908c7651474aa40151478c2fc70004 -->
+                                  </div>
+                              </div><!-- end ngRepeat: (key, value) in hotProduct.productCharas -->
+                          </div>
+                      </div>
+                      <div class="home-hot-arrow"><img class="" src="../../images/home/loan_arrow_right_1.png" alt="" style=""></div>
+                  </a>
+                  </li>
+              
+          </ul>
+          <!-- e : 贷款列表 -->
+        </div>
+      </div>
+		
+		  <div data-role="footer">
+		    <div class="tab-nav tabs">
+		    	<!-- <a ng-class="{'tab-item-active': isTabActive(), 'has-badge':badge, 'tab-hidden':isHidden()}" ng-disabled="disabled()" class="tab-item tab-item-active" icon-on="ion-home-ud-click" icon-off="ion-home-ud-unclick">
+				  ngIf: badge --><!-- ngIf: getIconOn() && isTabActive()
+				  <i class="icon ion-home-ud-click" ng-if="getIconOn() &amp;&amp; isTabActive()"></i>
+				  end ngIf: getIconOn() && isTabActive() --><!-- ngIf: getIconOff() && !isTabActive()
+				  <span class="tab-title ng-binding" ng-bind-html="title"></span>
+				 </a>
+				 
+				 <a ng-class="{'tab-item-active': isTabActive(), 'has-badge':badge, 'tab-hidden':isHidden()}" ng-disabled="disabled()" class="tab-item" icon-on="ion-social-ud-click" icon-off="ion-social-ud-unclick">
+				 ngIf: badge --><!-- ngIf: getIconOn() && isTabActive() --><!-- ngIf: getIconOff() && !isTabActive()
+				 <i class="icon ion-social-ud-unclick" ng-if="getIconOff() &amp;&amp; !isTabActive()"></i>
+				 end ngIf: getIconOff() && !isTabActive()
+				 <span class="tab-title ng-binding" ng-bind-html="title"></span>
+				 </a>
+				 
+				 <a ng-class="{'tab-item-active': isTabActive(), 'has-badge':badge, 'tab-hidden':isHidden()}" ng-disabled="disabled()" class="tab-item" icon-on="ion-person-ud-click" icon-off="ion-person-ud-unclick">
+				 ngIf: badge --><!-- ngIf: getIconOn() && isTabActive() --><!-- ngIf: getIconOff() && !isTabActive()
+				 <i class="icon ion-person-ud-unclick" ng-if="getIconOff() &amp;&amp; !isTabActive()"></i>
+				 end ngIf: getIconOff() && !isTabActive()
+				 <span class="tab-title ng-binding" ng-bind-html="title"></span>
+				 </a> -->
+		    </div>
+		  </div>
+		  <!-- <img src="images/home/"> -->
+		</div>
+   	</div>
+   </div>
+    <script src="../../../frame/Jquery/pc/jquery.js"></script>
+    <script src="../../../frame/Jquery/phone/jquery.mobile-1.4.5.js"></script>
+    <script src="../../../frame/Rose/1.0.0/Rose.src.js"></script>
+    
+    <script src="../../../frame/swiper/js/swiper.jquery.min.js"></script>
+    <script src="../../../frame/sea/3.0.0/sea.js"></script>
+    <script src="../../conf/config.js"></script>
+    <script>
+         seajs.use("../home/js/home.js", function(home) {
+				home.init();
+			});
+		</script>
+  </body>
+</html>

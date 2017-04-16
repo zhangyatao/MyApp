@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home.html</title>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="../frame/Jquery/phone/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" type="text/css" href="../frame/swiper/css/swiper.css">
+
+  </head>
+  
+  <body>
+   <div id="contains">
+   	<div id="grid">
+   		<div data-role="page" id="pageone">
+		  <div data-role="header">
+		    <h1>我的金融中心</h1>
+		  </div>
+		
+		  <div data-role="content">
+		  	<div class="swiper-container">
+		  		<div class="swiper-wrapper" id="carousal"></div>
+		  		 <div class="swiper-pagination"></div>
+		  	</div>
+		  </div>
+		
+		  <div data-role="footer">
+		    <h1>页面底部内容</h1>
+		  </div>
+		  <<img src="images/home/">
+		</div>
+   	</div>
+   </div>
+    <script src="../frame/Jquery/pc/jquery.js"></script>
+    <script src="../frame/Jquery/phone/jquery.mobile-1.4.5.js"></script>
+    <script src="../frame/Rose/1.0.0/Rose.src.js"></script>
+    
+    <script src="../frame/swiper/js/swiper.jquery.min.js"></script>
+    <script src="../frame/sea/3.0.0/sea.js"></script>
+    <script src="conf/config.js"></script>
+    <script>
+         seajs.use("../phone/home.js", function(home) {
+				home.init();
+			});
+		</script>
+  </body>
+</html>
