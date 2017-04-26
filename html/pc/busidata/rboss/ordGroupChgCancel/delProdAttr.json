@@ -1,0 +1,65 @@
+{
+    "retCode": "200",
+    "retMessage": "",
+    "retObject": {
+        "groupInfoList": [
+            {
+                "offerInstId": "策划实例编号",
+                "offerId": "策划ID",
+                "offerName": "策划名称",
+                "offerType": "策划类型",
+                "offerRoleId": "策划角色编号",
+                "offerRoleName": "策划角色名称",
+                "offerEffTime": "20160607000000",
+                "offerExpTime": "策划失效时间",
+                "groupRegionCode": "群组归属地",
+                "state":"状态",
+                "memberInfoList": [
+                    {
+                        "memberBillId": "成员号码",
+                        "memberUserId": "成员用户ID",
+                        "memberCustName": "客户名称",
+                        "memberProdCatalogId": "产品规格编号",
+                        "memberRoleId": "成员角色",
+                        "memberRoleName": "成员角色名称",
+                        "memberRegionId": "成员归属地",
+                        "memberBaseOfferId": "成员基本策划编号",
+                        "memberBaseOfferName": "成员基本策划名称",
+                        "memberBaseOfferInstId": "成员基本策划实例编号",
+                        "memberOfferEffTime": "成员群组策划生效时间",
+                        "memberOfferExpTime": "成员群组策划失效时间",
+                        "state":"状态"
+                    }
+                ]
+            },
+            {
+                "offerInstId": "策划实例编号",
+                "offerId": "策划ID",
+                "offerName": "策划名称",
+                "offerType": "策划类型",
+                "offerRoleId": "策划角色编号",
+                "offerRoleName": "策划角色名称",
+                "offerEffTime": "20160610000000",
+                "offerExpTime": "策划失效时间",
+                "groupRegionCode": "群组归属地",
+                "memberInfoList": [
+                    {
+                        "memberBillId": "成员号码",
+                        "memberUserId": "成员用户ID",
+                        "memberCustName": "客户名称",
+                        "memberProdCatalogId": "产品规格编号",
+                        "memberRoleId": "成员角色",
+                        "memberRoleName": "成员角色名称",
+                        "memberRegionId": "成员归属地",
+                        "memberBaseOfferId": "成员基本策划编号",
+                        "memberBaseOfferName": "成员基本策划名称",
+                        "memberBaseOfferInstId": "成员基本策划实例编号",
+                        "memberOfferEffTime": "成员群组策划生效时间",
+                        "memberOfferExpTime": "成员群组策划失效时间"
+                    }
+                ]
+            }
+
+        ]
+    }
+}
