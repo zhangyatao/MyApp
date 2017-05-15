@@ -1,0 +1,10 @@
+{
+	"retCode":"200",
+	"status": "true",
+	"data": [{
+		"bannerName": "五一劳动节",
+		"imgSrc": "3329797041177600.png",
+		"hrefAddr": "http://activity.myjinzhu.com/activity/redPacket500/index/H5-1"
+	}],
+	"message": "成功！"
+}

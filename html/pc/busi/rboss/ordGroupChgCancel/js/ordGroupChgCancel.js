@@ -25,9 +25,6 @@ function ordGroupChgCancelBusiness(){
 								//this.calcTotalMoney();
 							}
 						});
-//						Rose.ajax.postJson(srvMap.get(method), param, function(json, status) {
-//							
-//						});
 					}
 				}
 				

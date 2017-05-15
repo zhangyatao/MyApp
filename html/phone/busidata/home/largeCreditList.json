@@ -1,0 +1,25 @@
+{
+	"retCode":"200",
+	"status": "true",
+	"data": [{
+		"bannerName": "五一劳动节",
+		"imgSrc": "3329797041177600.png",
+		"hrefAddr": "http://activity.myjinzhu.com/activity/redPacket500/index/H5-1"
+	},
+	{
+		"bannerName": "动画",
+		"imgSrc": "3069035939939328.png",
+		"hrefAddr": "http://m.myjinzhu.com/#/video"
+	},
+	{
+		"bannerName": "金蛛接红包",
+		"imgSrc": "3068019502826496.png",
+		"hrefAddr": "http://activity.myjinzhu.com/activity/redPacketMeet/index/1"
+	},
+	{
+		"bannerName": "贷款指南",
+		"imgSrc": "3068019666945024.png",
+		"hrefAddr": "http://m.myjinzhu.com/#/guide"
+	}],
+	"message": "成功！"
+}

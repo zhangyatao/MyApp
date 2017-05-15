@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>line.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+    <canvas id="diagonal"></canvas>
+    <canvas id="tree"></canvas>
+     <canvas id="tree2"></canvas>
+      <canvas id="test" width="200px" height="200px" class="wraper"></canvas>  
+    <script src="../../../../frame/Jquery/pc/jquery.js"></script>
+    <script>
+    (function drawDiagonal(){
+    	var canvas = $("#diagonal")[0];
+    	var context = canvas.getContext('2d');
+    	context.beginPath();
+    	context.moveTo(70,140);
+    	context.lineTo(140,70);
+    	context.stroke();
+    	
+    	
+    	//画一个树
+    	var tree = $("#tree")[0];
+    	var treeContext = tree.getContext('2d');
+    	
+    	treeContext.translate(70,140);
+    	
+    	//treeContext.beginPath();
+    	treeContext.moveTo(0,0);
+    	treeContext.lineTo(70,-70);
+    	treeContext.stroke();
+    	
+    	
+    	//画一个树
+    	var tree2 = $("#tree2")[0];
+    	var tree2Context = tree2.getContext('2d');
+    	tree2Context.lineWidth = 4;
+    	tree2Context.lineJoin = 'round';
+    	tree2Context.strokeStyle = 'red';
+    	tree2Context.save();
+    	tree2Context.translate(130,200);
+    	cerateCanopyPath(tree2Context);
+    	
+    	tree2Context.stroke();
+    	tree2Context.restore();
+    	
+    	//
+    	var can =$('#test')[0];  
+    	 var cxt = can.getContext('2d');  
+    	 //绘制起始点、控制点、终点  
+                cxt.beginPath();  
+                cxt.moveTo(20,170);  
+                cxt.lineTo(130,40);  
+              //  cxt.lineTo(180,150);  
+                cxt.save();
+                //cxt.restore();
+                cxt.lineTo(180,150);  
+                 cxt.stroke();
+                cxt.strokeStyle = "rgba(255,0,0,1)";  
+  
+                //绘制2次贝塞尔曲线  
+                /*  cxt.beginPath();  
+                cxt.moveTo(20,170);  
+                cxt.quadraticCurveTo(130,40,180,150);  
+                cxt.stroke();  
+                cxt.stroke();    */
+    	
+    })()
+    function cerateCanopyPath(context){
+    	context.beginPath();
+    	context.moveTo(-25,-50);
+    	context.lineTo(-10,-80);
+    	context.lineTo(-20,-80);
+    	context.lineTo(-5,-110);
+    	context.lineTo(-15,-110);
+    	
+    	context.lineTo(0,-140);
+    	
+    	context.lineTo(15,-110);
+    	context.lineTo(5,-110);
+    	context.lineTo(20,-80);
+    	context.lineTo(10,-80);
+    	context.lineTo(25,-50);
+    	context.closePath();
+    }
+    </script>
+  </body>
+</html>

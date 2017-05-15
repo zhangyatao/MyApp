@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home2.html</title>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="../../../frame/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../frame/swiper/css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/style.css">
+     <link rel="stylesheet" type="text/css" href="../../common/css/common.css">
+    
+
+    
+    
+   <link rel="stylesheet" type="text/css" href="css/home2.css">
+
+  </head>
+  
+  <body>
+  	 <div id="contains">
+  	 	<div  class="page-header">
+  	 		 <h1 class="topTitle">我的金融中心</h1>
+  	 	</div>
+  	 	<div id="headCarousel" class="carousel slide">
+  	 		<ol class="carousel-indicators">
+  	 			<li data-target="#headCarousel"  v-for="(item, index) in headCarousel" :data-slide-to="index" :class=" index == 0 ? 'active':'' "></li>
+  	 		</ol>
+  	 		<div class="carousel-inner">
+  	 			<div class="item " v-for="(item, index) in headCarousel" :class=" index == 0 ? 'active':'' ">
+  	 				 <img :src= "'./../../images/home/'+item.imgSrc">
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 	<div data-role="content" class="row bg-white">
+		  	<a href="#link" class="col text-center">
+		  	<img class="home-p1" src="../../images/home/ion_loan.png">
+		  	<p class="home-f1">我要贷款</p>
+		  	</a>
+		  	<a href="#link" class="col text-center">
+		  	<img class="home-p1" src="../../images/home/ion_servant.png">
+		  	<p class="home-f1">代言人</p>
+		  	</a>
+		  	<a href="#link" class="col text-center">
+		  	<img class="home-p1" src="../../images/home/ion_credt_card.png">
+		  	<p class="home-f1">信用卡</p>
+		  	</a>
+		  </div>
+		  
+		  <div class="container row home-usr-rewards-outer home-unlogin-rewards-outer-bg">
+		  	<div class="row servant-bold">
+		  		<div class="col-33" style="padding-right: 1em; width: 33.3%; text-align: center !important;">
+		  			<div class="home-login-rewards-img">
+		  				<div class="home-rewards-fonts">
+		  					 累计收益
+		  				</div>
+		  				<div class="home-rewards-amt-fonts">
+		  					<span class="home-rewards-small-fonts" id="user_rewards">--</span>
+		  					<span class="home-rewards-small-fonts" style="color: rgb(228, 85, 96);">元</span>
+		  				</div>
+		  			</div>
+		  		</div>
+		  		<div class="col-66 text-left" style="width: 66%;">
+		  			<div class="row" style="border-bottom: 1px solid rgb(235, 235, 235);">
+		  				<div class="col text-center">
+		  					<a>
+		  						<img class="home-login-btn" src="../../images/home/unlogin_button.png">
+		  					</a>
+		  				</div>
+		  			</div>
+		  			<div class="row home-rewards-loan">
+		                <div class="col" style="border-right: 1px solid rgb(235, 235, 235);">
+		                  <div class="home-rewards-fonts">放贷总额</div>
+		                  <div class="home-rewards-amt-fonts home-rewards-middle-fonts">
+		                    <!-- ngIf: user != undefined -->
+		                    <!-- ngIf: user == undefined --><span class="" ng-if="user == undefined">---</span><!-- end ngIf: user == undefined -->
+		                    <span>元</span>
+		                  </div>
+		                </div>
+		                <div class="col">
+		                  <div class="home-rewards-fonts">推荐办卡</div>
+		                  <div class="home-rewards-amt-fonts home-rewards-middle-fonts">
+		                    <!-- ngIf: user != undefined -->
+		                    <!-- ngIf: user == undefined --><span class="" ng-if="user == undefined">---</span><!-- end ngIf: user == undefined -->
+		                    <span>张</span>
+		                  </div>
+		                </div>
+		            </div>
+		  		</div>
+		  	</div>
+		  </div>
+		  <div class="row">
+          <div class="col-75 font-bold" style="width: 75%;">
+            	热门贷款
+          </div>
+          <div class="col-25 text-right" style="width: 25%;">
+            <a class="font-grey" href="#/tab/credits">更多 &gt;&gt;</a>
+          </div>
+        </div>
+        <div class="">
+          <!-- s : 贷款列表 -->
+          <ul class="list">
+          	<li v-for="(item, index) in hotLoadProductList" >
+          		
+          	</li>
+          </ul>
+        </div>
+		  
+		  
+		  
+  	 </div>
+   
+    
+    <script src="../../../frame/vue/vue2.min.js"></script>
+    <script src="../../../frame/vue/vue-resource.min.js"></script>
+    <script src="../../../frame/Jquery/pc/jquery-1.10.2.js"></script>
+    <script src="../../../frame/bootstrap-3.3.7/js/bootstrap.js"></script>
+    <script src="../../../frame/hammer/hammer.min.js"></script>
+    <script src="../../../frame/hammer/jquery.hammer.js"></script>
+    <script src="../../../frame/sea/3.0.0/sea.js"></script>
+    <script src="../../conf/config.js"></script>
+    <script>
+         seajs.use("../home/js/home2.js", function(home) {
+				home.init();
+			});
+	</script>
+  </body>
+</html>
